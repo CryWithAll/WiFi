@@ -2,6 +2,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10.4-blue" alt='Python Version'>
   <img src="https://img.shields.io/badge/License-BSD%203--Clause-green" alt='License'>
+  <img src="https://img.shields.io/badge/Script%20version-0.0.2b-yellow" alt='Script version'>
 </p>
 ## ❗❗ДИСКЛЕЙМЕР❗❗️
 [ ☑️ ] автор не несет ответственность за ваши действия
