@@ -2,6 +2,7 @@
 
 # pip install chardet==5.0.0
 # pip install aiogram==2.22.2
+# pip install pyinstaller
 
 import subprocess
 from chardet import detect
