@@ -1,6 +1,7 @@
 # pip install pywifi
+# pip install comtypes
 
-import argpars
+import argparse
 import os
 import os.path
 import platform
@@ -108,6 +109,6 @@ def menu(client_ssid, path_to_file):
 
 
 try:
-    menu(client_ssid, path_file)
+    menu(client_ssid, path_to_file)
 except TypeError:
     print(RED, "write args\n example: python brute_wifi.py -s ExampleWiFiName -w ExamplePasswordList.txt", RESET)
