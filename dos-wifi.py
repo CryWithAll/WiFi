@@ -1,5 +1,5 @@
 import time
-import soket
+import socket
 import random
 import sys
 
@@ -33,5 +33,5 @@ def main():
         flood(sys.argv[1], int(sys.argv[2]), int(sys.argv[3]))
 
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     main()
